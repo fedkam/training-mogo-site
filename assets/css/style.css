@@ -105,11 +105,93 @@ body {
 
 /* Intro */
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   width: 100%;
   height: 100vh;
 
   background: url("../images/IntroBackground.jpg") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  line-height: 1;
+}
 
+
+.intro__inner {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto; /* выровняли по центру отступами в блоке*/
+  text-align: center; /* выровняли по центру в блоке*/
+}
+
+
+.intro__suptitle {
+  font-size: 72px;
+  font-family: 'Kaushan Script', cursive;
+  color: #fff;
+}
+
+
+.intro__title {
+  font-size: 150px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+
+.intro__title:after {
+  content:"";
+  display: block;
+  width: 60px;
+  height: 3px;
+
+  background-color: #fff;
+  margin: 60px auto 60px;
+}
+
+
+.btn {
+  display: inline-block;
+  vertical-align: center;
+  padding: 8px 30px;
+  text-transform: uppercase;
+  text-decoration: none; /* Отключили подчеркивание */
+
+  border: 3px solid #fff;
+  color:  #fff;
+
+  transition: background, color .2s linear;
+}
+
+.btn:hover {
+  background: #fff;
+  color:  #333;
+}
+
+
+.intro__slider {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+
+.slider__item {
+  width: 22%;
+  padding: 20px 0;
+  position: relative; /*для псевдоэлемента, чтоб выравнивать относительно этого*/
+
+  border-top: 3px #fff solid;
+
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+.slider__num {
+  font-size: 24px;
+  font-weight: 700;
 }
